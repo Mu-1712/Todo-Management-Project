@@ -1,7 +1,5 @@
 package com.SpringBoot.TodoManagement.Security;
 
-import com.SpringBoot.TodoManagement.Entity.User;
-import com.SpringBoot.TodoManagement.Repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
