@@ -5,6 +5,8 @@ import HeaderComponent from './Components/HeaderComponent'
 import TodoComponent from './Components/TodoComponent'
 import FooterComponent from './Components/FooterComponent'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import RegisterComponent from './Components/RegisterComponent'
+import LoginComponent from './Components/LoginComponent'
 
 
 function App() {
@@ -26,6 +28,12 @@ function App() {
               
               {/* http://localhost:8080/update-todo/1 */}
               <Route path='/update-todo/:id' element = { <TodoComponent /> }></Route>
+
+               {/* http://localhost:8080/register */}
+              <Route path='/register' element = {<RegisterComponent />}></Route>
+
+                 {/* http://localhost:8080/login */}
+               <Route path='/login' element = { <LoginComponent /> }></Route>
 
           </Routes>
         <FooterComponent />

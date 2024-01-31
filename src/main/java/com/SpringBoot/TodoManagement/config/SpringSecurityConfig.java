@@ -55,8 +55,8 @@ public class SpringSecurityConfig {
 //    public UserDetailsService userDetailsService(){
 //
 //        UserDetails ramesh = User.builder()
-//                .username("ramesh")
-//                .password(passwordEncoder().encode("password"))
+//                .username("Mush")
+//                .password(passwordEncoder().encode("Mush123"))
 //                .roles("USER")
 //                .build();
 //

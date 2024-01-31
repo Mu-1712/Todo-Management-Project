@@ -2,7 +2,7 @@ package com.SpringBoot.TodoManagement.Service.impl;
 
 import com.SpringBoot.TodoManagement.Dto.TodoDto;
 import com.SpringBoot.TodoManagement.Entity.Todo;
-import com.SpringBoot.TodoManagement.Exception.ResourseNotFoundException;
+import com.SpringBoot.TodoManagement.Exception.ResourceNotFoundException;
 import com.SpringBoot.TodoManagement.Repository.TodoRepository;
 import com.SpringBoot.TodoManagement.Service.TodoService;
 import lombok.AllArgsConstructor;
@@ -53,7 +53,7 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public TodoDto getTodo(long id) {
         Todo todo = todoRepository.findById(id)
-                .orElseThrow(() -> new ResourseNotFoundException("Todo not found with id:" + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Todo not found with id:" + id));
         return modelMapper.map(todo, TodoDto.class);
     }
 
@@ -67,7 +67,7 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public TodoDto updateTodo(TodoDto todoDto, Long id) {
         Todo todo = todoRepository.findById(id)
-                .orElseThrow(() -> new ResourseNotFoundException("Todo not found with id : " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Todo not found with id : " + id));
         todo.setTitle(todoDto.getTitle());
         todo.setDescription(todoDto.getDescription());
         todo.setCompleted(todoDto.isCompleted());
@@ -81,7 +81,7 @@ public class TodoServiceImpl implements TodoService {
     public void deleteTodo(Long id) {
 
         Todo todo = todoRepository.findById(id)
-                .orElseThrow(() -> new ResourseNotFoundException("Todo not found with id : " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Todo not found with id : " + id));
 
         todoRepository.deleteById(id);
     }
@@ -89,7 +89,7 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public TodoDto completeTodo(Long id) {
         Todo todo = todoRepository.findById(id)
-                .orElseThrow(() -> new ResourseNotFoundException("Todo not found with id : " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Todo not found with id : " + id));
 
         todo.setCompleted(Boolean.TRUE);
 
@@ -101,7 +101,7 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public TodoDto inCompleteTodo(Long id) {
         Todo todo = todoRepository.findById(id)
-                .orElseThrow(() -> new ResourseNotFoundException("Todo not found with id : " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Todo not found with id : " + id));
 
         todo.setCompleted(Boolean.FALSE);
 

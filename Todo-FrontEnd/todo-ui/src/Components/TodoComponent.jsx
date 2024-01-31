@@ -4,7 +4,6 @@ import { getTodo, saveTodo, updateTodo } from '../Services/TodoService'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const TodoComponent = () => {
-
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [completed, setCompleted] = useState(false)
