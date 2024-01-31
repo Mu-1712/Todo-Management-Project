@@ -24,7 +24,7 @@ const RegisterComponent = () => {
     <div className='container'>
         <br /><br />
         <div className='row'>
-            <div className='col-md-6 offset-md=3'>
+            <div className='col-md-6 offset-md-3'>
                 <div className='card'>
                     <div className='card-header'>
                         <h2 className='text-center'>User Registration Form</h2>
@@ -58,7 +58,6 @@ const RegisterComponent = () => {
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)}
                                     />
-
                                 </div>
                             </div>
 

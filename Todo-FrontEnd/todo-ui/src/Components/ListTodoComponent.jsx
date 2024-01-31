@@ -17,7 +17,7 @@ const ListTodoComponent = () => {
         getAllTodos().then((response) => {
             setTodos(response.data);
         }).catch(error => {
-            console.error(error);
+            console.error(error)
         })
     }
 
@@ -54,6 +54,7 @@ const ListTodoComponent = () => {
             console.error(error)
         })
     }
+
 
   return (
     <div className='container'>
