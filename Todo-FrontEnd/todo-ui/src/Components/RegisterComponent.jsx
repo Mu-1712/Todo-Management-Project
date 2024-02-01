@@ -92,7 +92,7 @@ const RegisterComponent = () => {
                             </div>
 
                             <div className='form-group mb-3'>
-                                <button className='btn btn-outline-primary' onClick={(e) => handleRegistrationForm}>Submit</button>
+                                <button className='btn btn-outline-primary' onClick={(e) => handleRegistrationForm(e)}>Submit</button>
                             </div>
                         </form>
                     </div>  
