@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { registerAPICall } from '../Services/AuthService'
 
 const RegisterComponent = () => {
